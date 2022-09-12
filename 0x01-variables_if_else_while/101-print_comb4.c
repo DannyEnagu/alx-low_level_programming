@@ -11,38 +11,37 @@
 
 int main(void)
 {
-	int num1 = 0;
-	int num2 = 0; 
-	int num3 = 0;
+	int digit1 = 0;
+	int digit2, digit3;
 
-	while (num1 <= 9)
+	while (digit1 <= 9)
 	{
-
-		while (num2 <= 9)
+		digit2 = 0;
+		while (digit2 <= 9)
 		{
-
-			while (num3 <= 9)
-		OOB	{
-				if (num1 != num2 &&
-				    num1 < num2 &&
-				    num2 != num3 &&
-				    num2 < num3)
+			digit3 = 0;
+			while (digit3 <= 9)
+			{
+				if (digit1 != digit2 &&
+				    digit1 < digit2 &&
+				    digit2 != digit3 &&
+				    digit2 < digit3)
 				{
-					putchar(num + 48);
-					putchar(num + 48);
-					putchar(num + 48);
+					putchar(digit1 + 48);
+					putchar(digit2 + 48);
+					putchar(digit3 + 48);
 
-					if (num1 + num2 + num3 != 24)
+					if (digit1 + digit2 + digit3 != 24)
 					{
 						putchar(',');
 						putchar(' ');
-					}	
+					}
 				}
-				++num3;
+				++digit3;
 			}
-			++num2;
+			++digit2;
 		}
-		++num1;
+		++digit1;
 	}
 	putchar('\n');
 
