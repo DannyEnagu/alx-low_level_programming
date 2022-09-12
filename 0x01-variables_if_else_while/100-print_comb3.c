@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: A program that prints all possible
- *              different combinations of two digits.
+ * 		different combinations of two digits.
  *
  * Return: Always 0 (Success)
 */
@@ -12,7 +12,7 @@
 int main(void)
 {
 	int num1 = 0;
-        int num2;
+	int num2;
 
 	while (num1 <= 9)
 	{
