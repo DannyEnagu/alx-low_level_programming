@@ -5,7 +5,7 @@
  *
  * @c: important. expected data type (int)
  *
- * Result: 1 if c is charcter else 0
+ * Return: 1 if c is charcter else 0
 */
 int _isalpha(int c)
 {
