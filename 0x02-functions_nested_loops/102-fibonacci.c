@@ -19,7 +19,7 @@ int main(void)
 		sum = num1 + num2;
 		printf("%lu", sum);
 
-		num1 = mun2;
+		num1 = num2;
 		num2 = sum;
 
 		if (i == 49)
