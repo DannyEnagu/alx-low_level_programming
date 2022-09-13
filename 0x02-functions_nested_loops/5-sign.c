@@ -5,7 +5,7 @@
  *
  * @n: expected - type int
  *
- * Result: expected 1, or 0, or -1
+ * Return: expected 1, or 0, or -1
 */
 int print_sign(int n)
 {
