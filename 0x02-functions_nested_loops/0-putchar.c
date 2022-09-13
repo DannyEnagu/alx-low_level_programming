@@ -3,10 +3,10 @@
 /**
  * main - Entry point
  *
- * Description: pint the string _putchar using 
- * 		the putchar fuction prototype.
+ * Description: pint the string _putchar using
+ *		the putchar fuction prototype.
  *
- * Return: Always 0 (success)		 
+ * Return: Always 0 (success)
 */
 
 int main(void)
@@ -17,9 +17,9 @@ int main(void)
 	for (i = 0; i < 8; ++i)
 	{
 		_putchar(str[i]);
-	}	
-	
+	}
+
 	_putchar('\n');
 
 	return (0);
-}	
+}
