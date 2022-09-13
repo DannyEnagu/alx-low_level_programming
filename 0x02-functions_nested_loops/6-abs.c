@@ -4,7 +4,7 @@
  *	value of an integer
  *
  * @n: accepted value - type int
- * 
+ *
  * Return: Always 0 (Success)
 */
 int _abs(int n)
