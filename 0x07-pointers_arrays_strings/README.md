@@ -1,0 +1,7 @@
+# 0x07. C - Even more pointers, arrays and strings
+ 
+## Tasks
+
+## Resource Links
+
+## My thoughts
