@@ -12,11 +12,14 @@
 
 int main(int argc, char *argv[])
 {
-	int prd;
+	int prd = 1, i;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
-		prd = atoi(argv[1]) * atoi(argv[2]);
+		for (i = 1; i < argc; i++)
+		{
+			prd *= atoi(argv[i]);
+		}
 		printf("%d\n", prd);
 		return (0);
 	}
