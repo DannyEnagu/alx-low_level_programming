@@ -17,12 +17,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (h = 0; h < ac; h++)
 	{
-		i = 0;
-		/*while (av[h][i] != '\0')
+		for (i = 0; av[h][i] != '\0'; i++)
 		{
 			len++;
-			i++;
-		} */
+		}
 		len++;
 	}
 
