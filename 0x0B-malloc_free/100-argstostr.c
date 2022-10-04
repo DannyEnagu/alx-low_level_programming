@@ -18,11 +18,12 @@ char *argstostr(int ac, char **av)
 	for (h = 0; h < ac; h++)
 	{
 		i = 0;
-		while (av[h][i] != '\0')
+		/*while (av[h][i] != '\0')
 		{
 			len++;
 			i++;
-		}
+		} */
+		len++;
 	}
 
 	str = malloc(sizeof(char) * (len + 1));
