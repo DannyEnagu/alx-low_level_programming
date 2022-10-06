@@ -16,10 +16,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s3;
 	unsigned int i, j, l1, l2;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	s1 == NULL ? s1 = "" : s1;
+	s2 == NULL ? s2 = "" : s2;
 
 		/* size of s1 */
 	l1 = 0;
