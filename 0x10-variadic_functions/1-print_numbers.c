@@ -12,7 +12,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 
-	if (separator && n > 0)
+	if (n > 0)
 	{
 		va_list ap;
 
@@ -20,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < n; i++)
 		{
 			printf("%d", va_arg(ap, int));
-			if (i + 1 != n)
+			if (separator && i + 1 != n)
 				printf("%s", separator);
 		}
 		va_end(ap);
