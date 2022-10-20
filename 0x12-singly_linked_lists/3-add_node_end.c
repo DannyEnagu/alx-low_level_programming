@@ -26,17 +26,22 @@ list_t *add_node_end(list_t **head, const char *str)
 	/* make the next of new_node null since it will be the last node */
 	new_node->next = NULL;
 
+	temp_node = *head; /* copy head node to temp_node */
+
 	/* if the list is empty, make the new node as head */
-	if (*head == NULL)
+	if (temp_node == NULL)
 		*head = new_node;
-	/* Else traverse till the last node */
-	while (temp_node->next != NULL)
-		temp_node = temp_node->next;
+	else
+	{
+		/* Else traverse till the last node */
+		while (temp_node->next != NULL)
+			temp_node = temp_node->next;
 
-	/* change the next of temp_node node */
-	temp_node->next = new_node;
+		/* change the next of temp_node node */
+		temp_node->next = new_node;
+	}
 
-	return (new_node);
+	return (*head);
 }
 
 /**
