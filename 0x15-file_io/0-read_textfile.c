@@ -23,15 +23,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	str = malloc(sizeof(char) * letters);
 
+	if(str == NULL)
+		return (0);
+
 	sz = read(fd, str, letters);
 	if (sz < j)
 		return (0);
 	str[sz] = '\0';
 
-	i = write(1, str, sz);
+	i = write(STDOUT_FILENO, str, sz);
 
 	if (i < j || i < sz)
 		return (0);
+
+	free(str);
 
 	close(fd);
 
