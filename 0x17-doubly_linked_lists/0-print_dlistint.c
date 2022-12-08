@@ -5,9 +5,9 @@
 *
 * @h: pointer to head node of DLL
 *
-* Return: Number of nodes 
+* Return: Number of nodes
 */
- 
+
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t i;

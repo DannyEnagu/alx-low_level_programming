@@ -6,14 +6,14 @@
 * @head: pointer to head node of a DLL
 * @index: index of target node
 *
-* REturn: target node, NULL if failed
+* Return: target node, NULL if failed
 */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *current;
 	unsigned int i, len = 0;
-	
+
 	if (head == NULL)
 		return (NULL);
 
@@ -29,14 +29,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	if (index > len)
 		return (NULL);
-	else
+
+
+	for (i = 0; i <= len; i++)
 	{
-		for (i = 0; i <= len; i++)
-		{
-			if (i == index)
-				break;
-			current = current->next;
-		}
+		if (i == index)
+			break;
+		current = current->next;
 	}
 
 	return (current);

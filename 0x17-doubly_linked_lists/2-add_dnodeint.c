@@ -7,7 +7,7 @@
 * @head: pointer to head node
 * @n: new node data
 *
-* REturn: Address of new node, NULL is failed 
+* Return: Address of new node, NULL is failed
 */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)

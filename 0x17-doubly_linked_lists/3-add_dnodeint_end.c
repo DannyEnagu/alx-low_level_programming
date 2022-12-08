@@ -4,6 +4,7 @@
 * add_dnodeint_end - Adds a new node at the end of a DLL list
 *
 * @head: pointer to head node
+* @n: new node data
 *
 * Return: Address of new node, NULL if failed
 */
@@ -24,7 +25,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		new->prev = NULL;
 		(*head) = new;
-		return (new);	
+		return (new);
 	}
 	else
 	{
