@@ -2,7 +2,7 @@
 
 /**
 * hash_table_create - Creates new Hash Table and initializes
-*	the Hash Table array. 
+*	the Hash Table array.
 *
 * @size: Size of the array.
 *
