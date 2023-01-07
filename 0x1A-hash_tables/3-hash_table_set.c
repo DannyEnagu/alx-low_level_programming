@@ -19,26 +19,44 @@ size_t print_listint(hash_node_t *h);
 int hash_table_set(hash_table_t *ht, const char *key,
 	const char *value)
 {
-	unsigned long int index;
+	unsigned long int index, i;
 	hash_node_t *head;
-	char *emstr = " ", *nostr = "";
+	char *key_copy, *value_copy;
 
-	/* Check for empty or no key string*/
-	if (*key == *emstr || *key == *nostr)
+	/* Check for empty OOBor no key string*/
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	index = key_index((unsigned char *)key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
+	key_copy = strdup(key);
+	value_copy = strdup(value);
+	if (!key_copy || !value_copy)
+		return (0);
+
+	for (i = index; ht->array[i]; i++)
+	{
+		if (strcmp(ht->array[i]->key, key) == 0)
+		{
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
+			return (1);
+		}
+	}
+
 	head = ht->array[index];
 	if (!head)
-		linkedlist_insert_end(&head, (char *)key, (char *)value);
+		linkedlist_insert_end(&head, key_copy, value_copy);
 	else
-		linkedlist_insert_head(&head, (char *)key, (char *)value);
+		linkedlist_insert_head(&head, key_copy, value_copy);
 
 	if (!head)
+	{
+		free(key_copy);
+		free(value_copy);
 		return (0);
+	}
 
 	ht->array[index] = head;
-
 	return (1);
 }
 
