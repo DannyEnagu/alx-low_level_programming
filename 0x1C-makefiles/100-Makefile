@@ -1,12 +1,12 @@
-# variables/Macros
 CC = gcc
-SRC = main.c school.c # source files
-OBJ = $(SRC:.c=.o) # creates object files from source files
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
 NAME = school
-RE = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
+.PHONY: all clean oclean fclean re
+
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
@@ -17,4 +17,4 @@ oclean:
 
 fclean: clean oclean
 
-re: fclean all
+re: fclean all 
