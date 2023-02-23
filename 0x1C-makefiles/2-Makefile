@@ -1,0 +1,10 @@
+# variables/Macros
+CC = gcc
+SRC = $(wildcard *.c) # source files
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
