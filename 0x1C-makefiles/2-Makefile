@@ -1,9 +1,8 @@
 # variables/Macros
 CC = gcc
-SRC = $(wildcard *.c) # source files
+SRC = main.c school.c #$(wildcard *.c) source files
 OBJ = $(SRC:.c=.o)
 NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-	@rm -f *.o
