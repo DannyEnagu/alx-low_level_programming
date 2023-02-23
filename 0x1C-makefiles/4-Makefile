@@ -7,7 +7,7 @@ RE = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
-	$(CC) $(CRFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CLFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
