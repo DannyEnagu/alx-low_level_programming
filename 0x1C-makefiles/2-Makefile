@@ -4,7 +4,5 @@ SRC = $(wildcard *.c) # source files
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
